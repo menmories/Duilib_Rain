@@ -2,10 +2,10 @@
 #define __Duilib_RAIN_H__
 
 
-#ifndef Duilib_EXPORTS
+#ifndef DUIlib_EXPORTS
 #	define DUILIB_API
 #else
-#	ifdef Duilib_EXPORTS
+#	ifdef DUIlib_EXPORTS
 #		if _MSC_VER >= 1500
 #			define DUILIB_API __declspec(dllexport)
 #		else
