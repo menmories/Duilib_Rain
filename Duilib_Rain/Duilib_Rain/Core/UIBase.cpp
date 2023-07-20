@@ -295,6 +295,36 @@ LDispatch:
 		::ShowWindow(m_hWnd, bShow ? (bTakeFocus ? SW_SHOWNORMAL : SW_SHOWNOACTIVATE) : SW_HIDE);
 	}
 
+	void CWindowWnd::Show()
+	{
+		::ShowWindow(m_hWnd, SW_SHOWNORMAL);
+	}
+
+	void CWindowWnd::Hide()
+	{
+		::ShowWindow(m_hWnd, SW_HIDE);
+	}
+
+	void CWindowWnd::ShowMaximized()
+	{
+		::ShowWindow(m_hWnd, SW_MAXIMIZE);
+	}
+
+	void CWindowWnd::ShowMinimized()
+	{
+		::ShowWindow(m_hWnd, SW_MINIMIZE);
+	}
+
+	bool CWindowWnd::IsMaximized()const
+	{
+		return IsZoomed(m_hWnd) ? true : false;
+	}
+	bool CWindowWnd::IsMinimized()const
+	{
+		return IsIconic(m_hWnd) ? true : false;
+	}
+
+
 	UINT CWindowWnd::ShowModal()
 	{
 		ASSERT(::IsWindow(m_hWnd));

@@ -262,7 +262,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Duilib_Rain.cpp" />
     <ClCompile Include="Layout\UIAnimationTabLayout.cpp" />
     <ClCompile Include="Layout\UIChildLayout.cpp" />
     <ClCompile Include="Layout\UIHorizontalLayout.cpp" />

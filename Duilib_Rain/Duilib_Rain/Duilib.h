@@ -1,11 +1,10 @@
 #ifndef __Duilib_RAIN_H__
 #define __Duilib_RAIN_H__
 
-
-#ifndef DUIlib_EXPORTS
+#ifndef DUILIB_RAIN_EXPORTS
 #	define DUILIB_API
 #else
-#	ifdef DUIlib_EXPORTS
+#	ifdef DUILIB_RAIN_EXPORTS
 #		if _MSC_VER >= 1500
 #			define DUILIB_API __declspec(dllexport)
 #		else
@@ -24,6 +23,8 @@
 
 #include <windows.h>
 #include <windowsx.h>
+#undef IsMaximized
+#undef IsMinimized
 #include <commctrl.h>
 #include <stddef.h>
 #include <richedit.h>
