@@ -79,10 +79,9 @@ LRESULT CWindowImplBase::OnClose(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lPar
 	return 0;
 }
 
-LRESULT CWindowImplBase::OnDestroy(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled)
+void CWindowImplBase::OnDestroy()
 {
-	bHandled = FALSE;
-	return 0;
+	::PostQuitMessage(0);
 }
 
 #if defined(WIN32) && !defined(UNDER_CE)
@@ -385,7 +384,11 @@ LRESULT CWindowImplBase::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_CREATE:			lRes = OnCreate(uMsg, wParam, lParam, bHandled); break;
 	case WM_CLOSE:			lRes = OnClose(uMsg, wParam, lParam, bHandled); break;
-	case WM_DESTROY:		lRes = OnDestroy(uMsg, wParam, lParam, bHandled); break;
+	case WM_DESTROY:
+	{
+		OnDestroy();
+		return 0;
+	}
 #if defined(WIN32) && !defined(UNDER_CE)
 	case WM_NCACTIVATE:		lRes = OnNcActivate(uMsg, wParam, lParam, bHandled); break;
 	case WM_NCCALCSIZE:		lRes = OnNcCalcSize(uMsg, wParam, lParam, bHandled); break;

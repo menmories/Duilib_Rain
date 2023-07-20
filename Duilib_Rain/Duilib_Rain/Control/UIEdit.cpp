@@ -54,7 +54,7 @@ namespace Duilib
 			uStyle = WS_CHILD | ES_AUTOHSCROLL;
 		}	
 		if( m_pOwner->IsPasswordMode() ) uStyle |= ES_PASSWORD;
-		Create(m_pOwner->GetManager()->GetPaintWindow(), NULL, uStyle, 0, rcPos);
+		Create(m_pOwner->GetManager()->GetPaintWindow(), NULL, rcPos, uStyle, 0);
 		SetWindowFont(m_hWnd, m_pOwner->GetManager()->GetFontInfo(m_pOwner->GetFont())->hFont, TRUE);
 		Edit_LimitText(m_hWnd, m_pOwner->GetMaxChar());
 		if( m_pOwner->IsPasswordMode() ) Edit_SetPasswordChar(m_hWnd, m_pOwner->GetPasswordChar());

@@ -79,7 +79,7 @@ void CComboWnd::Init(CComboUI* pOwner)
         ::MapWindowRect(pOwner->GetManager()->GetPaintWindow(), HWND_DESKTOP, &rc);
     }
     
-    Create(pOwner->GetManager()->GetPaintWindow(), NULL, WS_POPUP, WS_EX_TOOLWINDOW, rc);
+	Create(pOwner->GetManager()->GetPaintWindow(), NULL, rc, WS_POPUP, WS_EX_TOOLWINDOW);
     // HACK: Don't deselect the parent's caption
     HWND hWndParent = m_hWnd;
     while( ::GetParent(hWndParent) != NULL ) hWndParent = ::GetParent(hWndParent);

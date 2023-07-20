@@ -28,12 +28,9 @@ protected:
 		return CDuiString(TEXT("XML\\MainWindow.xml"));
 	}
 
-	virtual LRESULT OnDestroy(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+	virtual void OnDestroy()
 	{
-		CWindowImplBase::OnDestroy(uMsg, wParam, lParam, bHandled);
-		::PostQuitMessage(0);
-		bHandled = TRUE;
-		return FALSE;
+		CWindowImplBase::OnDestroy();
 	}
 };
 

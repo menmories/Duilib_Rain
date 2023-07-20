@@ -44,7 +44,7 @@ namespace Duilib
 		{
 			RECT rcPos = CalPos();
 			UINT uStyle = WS_CHILD;
-			Create(m_pOwner->GetManager()->GetPaintWindow(), NULL, uStyle, 0, rcPos);
+			Create(m_pOwner->GetManager()->GetPaintWindow(), NULL, rcPos, uStyle, 0);
 			SetWindowFont(m_hWnd, m_pOwner->GetManager()->GetFontInfo(m_pOwner->GetFont())->hFont, TRUE);
 		}
 

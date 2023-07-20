@@ -177,7 +177,7 @@ void CMenuWnd::Init(CMenuElementUI* pOwner, STRINGorID xml, POINT point,
 
 	CMenuWnd::GetGlobalContextMenuObserver().AddReceiver(this);
 
-	Create((m_pOwner == NULL) ? pMainPaintManager->GetPaintWindow() : m_pOwner->GetManager()->GetPaintWindow(), NULL, WS_POPUP , WS_EX_TOOLWINDOW | WS_EX_TOPMOST, CDuiRect());
+	Create((m_pOwner == NULL) ? pMainPaintManager->GetPaintWindow() : m_pOwner->GetManager()->GetPaintWindow(), NULL, CDuiRect(), WS_POPUP, WS_EX_TOOLWINDOW | WS_EX_TOPMOST);
 
 	// HACK: Don't deselect the parent's caption
     HWND hWndParent = m_hWnd;

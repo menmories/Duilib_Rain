@@ -252,7 +252,7 @@ LDispatch:
 		return Create(hwndParent,pstrWindowName,dwStyle,dwExStyle,0,0,0,0,NULL);
 	}
 
-	HWND CWindowWnd::Create(HWND hwndParent, LPCTSTR pstrName, DWORD dwStyle, DWORD dwExStyle, const RECT rc, HMENU hMenu)
+	HWND CWindowWnd::Create(HWND hwndParent, LPCTSTR pstrName, const RECT rc, DWORD dwStyle, DWORD dwExStyle, HMENU hMenu)
 	{
 		return Create(hwndParent, pstrName, dwStyle, dwExStyle, rc.left, rc.top, rc.right - rc.left, rc.bottom - rc.top, hMenu);
 	}
@@ -293,6 +293,11 @@ LDispatch:
 		ASSERT(::IsWindow(m_hWnd));
 		if( !::IsWindow(m_hWnd) ) return;
 		::ShowWindow(m_hWnd, bShow ? (bTakeFocus ? SW_SHOWNORMAL : SW_SHOWNOACTIVATE) : SW_HIDE);
+	}
+
+	void CWindowWnd::UpdateWindow()
+	{
+		::UpdateWindow(m_hWnd);
 	}
 
 	void CWindowWnd::Show()
