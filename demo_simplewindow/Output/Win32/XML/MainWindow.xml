@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Window size="1200,720" caption="0,0,0,30" sizebox="8,8,8,8">
-	<VerticalLayout bkcolor="#ff1378fc">
+	<VerticalLayout>
+		<!--用来做标题栏 高度固定30pix,宽度随着窗口的宽度变化 bkcolor="#ff1378fc"-->
+		<HorizontalLayout height="30" bkcolor="#ff333433">
+			
+		</HorizontalLayout>
+		<!--如果不设定宽和高则宽和高会自动扩展至最大-->
+		<VerticalLayout bkimage="xml\bkimage.jpg">
+
+		</VerticalLayout>
 	</VerticalLayout>
-	
 </Window>
