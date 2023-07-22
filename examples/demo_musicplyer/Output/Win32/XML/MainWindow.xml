@@ -6,8 +6,8 @@
 			
 		</HorizontalLayout>
 		<!--如果不设定宽和高则宽和高会自动扩展至最大-->
-		<VerticalLayout bkimage="xml\psc.jpg">
-
+		<!-- <VerticalLayout bkimage="xml\psc.jpg"> -->
+		<VerticalLayout bkimage="F:\Images\2fd07e4fa780463190fb67b832d0dac3.jpg">
 		</VerticalLayout>
 	</VerticalLayout>
 </Window>

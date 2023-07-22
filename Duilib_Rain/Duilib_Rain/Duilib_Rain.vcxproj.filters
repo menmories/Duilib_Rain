@@ -207,6 +207,9 @@
     <ClInclude Include="Utils\WinImplBase.h">
       <Filter>头文件\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Utils\stb_image.h">
+      <Filter>头文件\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -354,9 +357,6 @@
       <Filter>源文件\Utils</Filter>
     </ClCompile>
     <ClCompile Include="Utils\XUnzip.cpp">
-      <Filter>源文件\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="Utils\stb_image.c">
       <Filter>源文件\Utils</Filter>
     </ClCompile>
   </ItemGroup>

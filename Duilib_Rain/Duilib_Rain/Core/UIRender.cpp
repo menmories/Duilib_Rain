@@ -42,10 +42,10 @@ extern ZRESULT UnzipItem(HZIP hz, int index, void *dst, unsigned int len, DWORD 
 
 extern "C"
 {
-    extern unsigned char *stbi_load_from_memory(unsigned char const *buffer, int len, int *x, int *y, \
+    /*extern unsigned char *stbi_load_from_memory(unsigned char const *buffer, int len, int *x, int *y, \
         int *comp, int req_comp);
-	extern void     stbi_image_free(void *retval_from_stbi_load);
-
+	extern void     stbi_image_free(void *retval_from_stbi_load);*/
+#include "Utils/stb_image.h"
 };
 
 namespace Duilib {

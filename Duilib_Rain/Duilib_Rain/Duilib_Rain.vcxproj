@@ -208,6 +208,7 @@
     <ClInclude Include="Utils\FlashEventHandler.h" />
     <ClInclude Include="Utils\Internal.h" />
     <ClInclude Include="Utils\IWindowBase.h" />
+    <ClInclude Include="Utils\stb_image.h" />
     <ClInclude Include="Utils\UIDelegate.h" />
     <ClInclude Include="Utils\UIShadow.h" />
     <ClInclude Include="Utils\Utils.h" />
@@ -277,12 +278,6 @@
     <ClCompile Include="Utils\DuiAutoComplete.cpp" />
     <ClCompile Include="Utils\DuiTrayIcon.cpp" />
     <ClCompile Include="Utils\IWindowBase.cpp" />
-    <ClCompile Include="Utils\stb_image.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="Utils\UIDelegate.cpp" />
     <ClCompile Include="Utils\UIShadow.cpp" />
     <ClCompile Include="Utils\Utils.cpp" />
