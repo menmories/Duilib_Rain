@@ -5,7 +5,7 @@
 */
 #ifndef __UIFLASH_H__
 #define __UIFLASH_H__
-#pragma once
+
 #include "Utils/FlashEventHandler.h"
 #include "Utils/flash11.tlh"
 
