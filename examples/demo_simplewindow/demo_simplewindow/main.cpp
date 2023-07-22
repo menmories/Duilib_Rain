@@ -15,7 +15,8 @@ public:
 protected:
 	virtual void InitWindow()
 	{
-
+		//CButtonUI* Button = FindControlByName<CButtonUI>(TEXT("myname"));
+		//Button->OnNotify += MakeDelegate(this, &CMainWindow::OnDestroy);
 	}
 
 	virtual LPCTSTR GetWindowClassName()const
