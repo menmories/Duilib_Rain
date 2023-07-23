@@ -57,6 +57,11 @@ bool CMusicPlayer::Play2D(const char* filename)
 	return true;
 }
 
+void CMusicPlayer::Stop()
+{
+	m_soundEngine->stopAllSounds();
+}
+
 bool CMusicPlayer::LoadSoundSourceFile(const char* sourceFile, void** data, int* len)
 {
 	FILE* pFile = fopen(sourceFile, "rb");
