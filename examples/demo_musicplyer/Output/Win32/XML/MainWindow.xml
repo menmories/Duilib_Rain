@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Window size="1200,720" caption="0,0,0,30" sizebox="8,8,8,8">
+	<!--这里的id其实完全没用，只是为了方便查看，实际上真实的字体ID是按顺序排列从0开始的-->
+	<Font id="0" name="Microsoft YaHei" size="16"/>
+	<Font id="1" name="Microsoft YaHei" size="14"/>
 	<VerticalLayout>
 		<!--用来做标题栏 高度固定30pix,宽度随着窗口的宽度变化 bkcolor="#ff1378fc"-->
 		<HorizontalLayout height="30" bkcolor="#ff333433">
-			<HorizontalLayout></HorizontalLayout>
+			<HorizontalLayout>
+				<HorizontalLayout width="10"/>
+				<Label name="label_caption_title" font="1" text="二次元音乐播放器" textcolor="#ffdcdcdc"/>
+			</HorizontalLayout>
 			<HorizontalLayout width="120">
 				<Button name="btn_min" text="-" normalimage="XML\btn_caption_normal.png" hotimage="XML\btn_caption_hot.png" pushedimage="XML\btn_caption_pushed.png"/>
 				<Button name="btn_max" text="口" normalimage="XML\btn_caption_normal.png" hotimage="XML\btn_caption_hot.png" pushedimage="XML\btn_caption_pushed.png"/>
@@ -13,6 +19,24 @@
 		<!--如果不设定宽和高则宽和高会自动扩展至最大-->
 		<!-- <VerticalLayout bkimage="xml\psc.jpg"> -->
 		<VerticalLayout bkimage="xml\psc.jpg">
+			<HorizontalLayout height="30">
+				<Button name="btn_openaudiofile" width="90" height="30" font="1" text="打开音乐" normalimage="XML\simple_button_normal.png" hotimage="XML\simple_button_hot.png" pushedimage="XML\simple_button_pushed.png" textcolor="#fcfcfc"/>
+
+			</HorizontalLayout>
+			<HorizontalLayout height="128">
+				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
+				<VerticalLayout width="128" bkimage="xml\20230719230009.jpg"/>
+				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
+				<VerticalLayout width="128" bkimage="xml\20230719230009.jpg"/>
+				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
+			</HorizontalLayout>
+			<HorizontalLayout height="128">
+				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
+				<VerticalLayout width="128" bkimage="xml\20230719230009.jpg"/>
+				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
+				<VerticalLayout width="128" bkimage="xml\20230719230009.jpg"/>
+				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
+			</HorizontalLayout>
 			<HorizontalLayout height="128">
 				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
 				<VerticalLayout width="128" bkimage="xml\20230719230009.jpg"/>

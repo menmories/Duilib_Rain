@@ -104,6 +104,7 @@
 
 #include "Utils/WinImplBase.h"
 #include "Utils/IWindowBase.h"
+#include "Utils/UIOpenFileDialog.h"
 
 #include "Core/Application.h"
 

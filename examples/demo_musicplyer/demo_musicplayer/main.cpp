@@ -4,7 +4,8 @@
 #include "stdafx.h"
 #include "MusicPlayer.h"
 #include <Duilib.h>
-
+#include <atlbase.h>
+#include <atlstr.h>
 using namespace Duilib;
 
 
@@ -24,6 +25,7 @@ protected:
 	CButtonUI* m_btn_close;
 	CButtonUI* m_btn_min;
 	CButtonUI* m_btn_max;
+	CButtonUI* m_btn_openFile;
 
 	virtual void InitWindow()
 	{
@@ -32,10 +34,12 @@ protected:
 		m_btn_close = FindControlByName<CButtonUI>(TEXT("btn_close"));
 		m_btn_min = FindControlByName<CButtonUI>(TEXT("btn_min"));
 		m_btn_max = FindControlByName<CButtonUI>(TEXT("btn_max"));
+		m_btn_openFile = FindControlByName<CButtonUI>(TEXT("btn_openaudiofile"));
 
 		m_btn_min->OnNotify += MakeDelegate(this, &CMainWindow::OnBtnMinClicked, _T("click"));
 		m_btn_max->OnNotify += MakeDelegate(this, &CMainWindow::OnBtnMaxClicked, _T("click"));
 		m_btn_close->OnNotify += MakeDelegate(this, &CMainWindow::OnBtnCloseClicked, _T("click"));
+		m_btn_openFile->OnNotify += MakeDelegate(this, &CMainWindow::OnBtnOpenFileClicked, _T("click"));
 
 		CMusicPlayer* musicPlayer = CMusicPlayer::Get();
 		string filename1 = "É½Æé»ÝÀí¡ª¡ª¡¶Starlight¡·£¨êÄËÞÆßÐÇ ED£© - 1.202206031532_x264(Av639680153,P1).mp3";
@@ -59,6 +63,21 @@ protected:
 	}
 
 private:
+	bool OnBtnOpenFileClicked(TNotifyUI* pTNotifyUI, LPARAM lParam, WPARAM wParam)
+	{
+		COpenFileDialogUI fileDialog(m_hWnd);
+		fileDialog.SetTitle(TEXT("´ò¿ªÒôÀÖ"));
+		fileDialog.SetFileFilter(TEXT("All File\0*.*\0"));
+		if (fileDialog.Open())
+		{
+			CMusicPlayer* musicPlayer = CMusicPlayer::Get();
+			CStringA fileName = fileDialog.GetFileName();
+			musicPlayer->AddNewSound(fileName.GetString());
+			musicPlayer->Stop();
+			musicPlayer->Play2D(fileName.GetString());
+		}
+		return true;
+	}
 
 	bool CMainWindow::OnBtnMinClicked(TNotifyUI* pTNotifyUI, LPARAM lParam, WPARAM wParam)
 	{

@@ -21,6 +21,7 @@ public:
 
 	bool Play2D(const char* filename);
 
+	void Stop();
 private:
 	bool LoadSoundSourceFile(const char* sourceFile, void** data, int* len);
 
