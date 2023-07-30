@@ -30,6 +30,11 @@ bool CMusicPlayer::IsInitSuccess() const
 
 bool CMusicPlayer::AddNewSound(const char* filename)
 {
+	auto iter = m_playList.find(filename);
+	if (iter != m_playList.end())
+	{
+		return true;
+	}
 	void* data = nullptr;
 	int len = 0;
 	if (!LoadSoundSourceFile(filename, &data, &len))

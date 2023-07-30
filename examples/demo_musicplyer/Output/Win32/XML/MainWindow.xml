@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Window size="1200,720" caption="0,0,0,30" sizebox="8,8,8,8">
+<Window size="1200,760" caption="0,0,0,30" sizebox="8,8,8,8">
 	<!--这里的id其实完全没用，只是为了方便查看，实际上真实的字体ID是按顺序排列从0开始的-->
 	<Font id="0" name="Microsoft YaHei" size="16"/>
 	<Font id="1" name="Microsoft YaHei" size="14"/>
-	<VerticalLayout>
+	<Font id="2" name="Microsoft YaHei" size="16"/>
+	<VerticalLayout bordersize="1" bordercolor="ff009bd6" inset="1,1,1,1">
 		<!--用来做标题栏 高度固定30pix,宽度随着窗口的宽度变化 bkcolor="#ff1378fc"-->
-		<HorizontalLayout height="30" bkcolor="#ff333433">
+		<HorizontalLayout height="30" bkcolor="#ff121212">
 			<HorizontalLayout>
 				<HorizontalLayout width="10"/>
 				<Label name="label_caption_title" font="1" text="二次元音乐播放器" textcolor="#ffdcdcdc"/>
 			</HorizontalLayout>
 			<HorizontalLayout width="120">
-				<Button name="btn_min" text="-" normalimage="XML\btn_caption_normal.png" hotimage="XML\btn_caption_hot.png" pushedimage="XML\btn_caption_pushed.png"/>
-				<Button name="btn_max" text="口" normalimage="XML\btn_caption_normal.png" hotimage="XML\btn_caption_hot.png" pushedimage="XML\btn_caption_pushed.png"/>
-				<Button name="btn_close" text="X" normalimage="XML\btn_caption_normal.png" hotimage="XML\btn_caption_close_hot.png" pushedimage="XML\btn_caption_close_pushed.png"/>
+				<Button name="btn_min" text="" normalimage="XML\btn_caption_min_normal.png" hotimage="XML\btn_caption_min_hot.png" pushedimage="XML\btn_caption_min_pushed.png"/>
+				<Button name="btn_max" text="" normalimage="XML\btn_caption_max_normal.png" hotimage="XML\btn_caption_max_hot.png" pushedimage="XML\btn_caption_max_pushed.png"/>
+				<Button name="btn_close" text="" normalimage="XML\btn_caption_close_normal.png" hotimage="XML\btn_caption_close_hot.png" pushedimage="XML\btn_caption_close_pushed.png"/>
 			</HorizontalLayout>
 		</HorizontalLayout>
 		<!--如果不设定宽和高则宽和高会自动扩展至最大-->
 		<!-- <VerticalLayout bkimage="xml\psc.jpg"> -->
-		<VerticalLayout bkimage="xml\psc.jpg">
-			<HorizontalLayout height="30">
+		<VerticalLayout bkimage="xml\psc.jpg" topbordersize="1" bordercolor="#ffacacac" inset="0,1,0,0">
+			<HorizontalLayout>
+				<VerticalLayout bkcolor="#ff191c1f" width="230">
+					<List name="list_selectButton" itemhotbkcolor="#ff009bd6" itemselectedbkcolor="#ff22272a">
+						<ListContainerElement name="menu_Open" height="45" inset="40,0,0,0">
+							<Label text="本地音乐" font="2" textcolor="#ffffffff" mouse="false"/>
+						</ListContainerElement>
+						<ListContainerElement name="menu_Mark" height="45" inset="40,0,0,0">
+							<Label text="播放列表" font="2" textcolor="#ffffffff" mouse="false"/>
+						</ListContainerElement>
+						<ListContainerElement name="menu_Delete" height="45" inset="40,0,0,0">
+							<Label text="我喜欢" font="2" textcolor="#ffffffff" mouse="false"/>
+						</ListContainerElement>
+					</List>
+				</VerticalLayout>
+				<TabLayout name="tab_main">
+					<VerticalLayout bkcolor="7f22272a">
+						<List name="list_localmusic" itemtextcolor="#ffffffff" itemhottextcolor="#ffffffff" itemselectedtextcolor="#ffffffff" itemtextpadding="5,0,0,0" itemfont="1" itemhotbkcolor="#7f999999" itemselectedbkcolor="#7f535353">
+							<ListHeader height="30" padding="0,0,0,1" bkcolor="#ff191c1f" bordersize="1" bordercolor="#FFD7D7D7" leftbordersize="1" rightbordersize="1" bottombordersize="1">
+								<ListHeaderItem text="序号" font="1" name="lh_localmusic_id" textcolor="#ffcfcfcf" width="60" align="left" textpadding="15,0,0,0" />
+								<ListHeaderItem text="标题" font="1" name="lh_localmusic_title" textcolor="#ffcfcfcf" width="360" align="left" textpadding="15,0,0,0" />
+								<ListHeaderItem text="歌手" font="1" name="lh_localmusic_songer" textcolor="#ffcfcfcf" width="160" align="left" textpadding="15,0,0,0" />
+								<ListHeaderItem text="专辑" font="1" name="lh_localmusic_album" textcolor="#ffcfcfcf" width="260" align="left" textpadding="15,0,0,0" />
+								<ListHeaderItem text="时间" font="1" name="lh_localmusic_time" textcolor="#ffcfcfcf" width="80" align="left" textpadding="15,0,0,0" />
+								<Control width="1" bkcolor="#FFD7D7D7"/>
+							</ListHeader>
+						</List>
+					</VerticalLayout>
+					<VerticalLayout bkcolor="7f22272a">
+
+					</VerticalLayout>
+
+					<VerticalLayout bkcolor="7f22272a">
+
+					</VerticalLayout>
+				</TabLayout>
+			</HorizontalLayout>
+			<HorizontalLayout bkcolor="#ff333433" height="80">
+				<HorizontalLayout width="230">
+
+				</HorizontalLayout>
+				<HorizontalLayout>
+					<Button name="btn_openaudiofile" width="80" height="30" font="1" text="打开音乐" normalimage="XML\simple_button_normal.png" hotimage="XML\simple_button_hot.png" pushedimage="XML\simple_button_pushed.png" textcolor="#fcfcfc"/>
+						<Button name="btn_mymusic" width="80" height="30" font="1" text="打开音乐" normalimage="XML\simple_button_normal.png" hotimage="XML\simple_button_hot.png" pushedimage="XML\simple_button_pushed.png" textcolor="#fcfcfc"/>
+						<Button name="btn_mylove" width="80" height="30" font="1" text="打开音乐" normalimage="XML\simple_button_normal.png" hotimage="XML\simple_button_hot.png" pushedimage="XML\simple_button_pushed.png" textcolor="#fcfcfc"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+			
+			<!-- <HorizontalLayout height="30">
 				<Button name="btn_openaudiofile" width="90" height="30" font="1" text="打开音乐" normalimage="XML\simple_button_normal.png" hotimage="XML\simple_button_hot.png" pushedimage="XML\simple_button_pushed.png" textcolor="#fcfcfc"/>
 
 			</HorizontalLayout>
@@ -43,7 +91,7 @@
 				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
 				<VerticalLayout width="128" bkimage="xml\20230719230009.jpg"/>
 				<VerticalLayout width="128" bkimage="xml\20230719225947.jpg"/>
-			</HorizontalLayout>
+			</HorizontalLayout> -->
 		</VerticalLayout>
 	</VerticalLayout>
 </Window>

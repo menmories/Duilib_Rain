@@ -200,6 +200,7 @@
     <ClInclude Include="Control\UIRichEdit.h" />
     <ClInclude Include="Control\UIScrollBar.h" />
     <ClInclude Include="Control\UISlider.h" />
+    <ClInclude Include="Control\UITable.h" />
     <ClInclude Include="Control\UIText.h" />
     <ClInclude Include="Control\UITreeView.h" />
     <ClInclude Include="Control\UIWebBrowser.h" />
@@ -259,6 +260,7 @@
     <ClCompile Include="Control\UIRichEdit.cpp" />
     <ClCompile Include="Control\UIScrollBar.cpp" />
     <ClCompile Include="Control\UISlider.cpp" />
+    <ClCompile Include="Control\UITable.cpp" />
     <ClCompile Include="Control\UIText.cpp" />
     <ClCompile Include="Control\UITreeView.cpp" />
     <ClCompile Include="Control\UIWebBrowser.cpp" />
